@@ -1,0 +1,39 @@
+// Debug Settings
+$debug : transparent;
+
+// Media Query Breakpoints
+$mobile-portrait : em(320px);
+$mobile-landscape : em(480px);
+$tablet : em(768px);
+$desktop : em(1180px);
+
+// Media Query Definitions
+$tablet-below: new-breakpoint(max-width $tablet);
+$desktop-below: new-breakpoint(max-width $desktop);
+$desktop-above: new-breakpoint(min-width $desktop);
+
+body,html{
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	background: darken($debug, 0%);
+}
+
+.zone-wrapper{
+	$zone-padding-vertical: 1em;
+	padding-top: $zone-padding-vertical;
+	padding-bottom: $zone-padding-vertical;
+	background: darken($debug, 5%);
+	.zone{
+		@include outer-container;
+		.region{
+			background: darken($debug, 10%);
+			@include span-columns(12);
+			@include media($tablet-below){
+				@include span-columns(12);
+				padding-left: 1em;
+				padding-right: 1em;
+			}
+		}
+	}
+}

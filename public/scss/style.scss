@@ -1,0 +1,44 @@
+/**
+	* Styles.scss
+	*
+	*	Version 1.0.0
+	*
+	* @see https://css-tricks.com/sass-style-guide/
+	*/
+
+	/* Vendor Dependencies */
+		
+		/* Bourbon / Neat / Refills
+		 *
+		 * @see http://bourbon.io/
+		 * @see http://neat.bourbon.io/
+		 * @see http://bitters.bourbon.io/
+		 *
+		 * Note: To customize Bitters, you are advised to modify the library
+		 * source files. This goes against most portability / sustainability
+		 * guidelines, but it is the author's intent it remains a scaffold instead
+		 * of a CSS reset. We can implement it as such by adding the SASS
+		 * !default declaration to the base/base reference manually.
+		 *
+		 * @see https://github.com/thoughtbot/bitters/issues/20
+		 * @see https://github.com/thoughtbot/bitters/pull/32
+		 * @see https://github.com/thoughtbot/bitters/tree/master/app/assets/stylesheets
+		 *
+		 * Note: To use Refills, reference the @import path from node_modules/node-refills/assets/stylesheets/refills
+		 *
+		 */
+
+		// Import Dependencies
+		@import "bourbon";
+		@import "base/base";
+		@import "base/grid-settings";
+		@import "neat";
+
+
+
+		// Import Refills Patterns
+		@import "refills/type-system-rounded";
+		@import "refills/vertical-tabs";
+
+		// Import Authored Dependencies
+		@import "partials/global/global.scss";

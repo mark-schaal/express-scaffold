@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{ title }}</title>
+		<link rel='stylesheet' href='/dist/main.min.css' />
+		<script type="text/javascript" src="/dist/vendors.js"></script>
+		<script type="text/javascript" src="/dist/main.min.js"></script>
+	</head>
+	<body>
+		<header class="zone-wrapper zone-wrapper-header">
+			<div class="zone zone-header">
+				<div class="region region-header"></div>
+			</div>
+		</header>
+		<div class="zone-wrapper zone-wrapper-content">
+			<div class="zone zone-content">
+				<div class="region region-content">
+					<a id="main-content"></a>
+					<article class="type-system-rounded">
+						{{{ yield }}}
+					</article>
+				</div>
+			</div>
+		</div>
+		<footer class="zone-wrapper zone-wrapper-footer">
+			<div class="zone zone-footer">
+				<div class="region region-footer"></div>
+			</div>
+		</footer>
+	</body>
+</html>
