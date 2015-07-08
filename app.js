@@ -15,9 +15,18 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'html');
 app.set('layout', 'layouts/default');
-app.set('partials', {});
+app.set('partials', {
+  header  : 'partials/global/header',
+  meta    : 'partials/global/meta',
+  styles  : 'partials/global/styles',
+  scripts : 'partials/global/scripts',
+  footer  : 'partials/global/footer',
+});
 app.enable('view cache');
 app.engine('html', require('hogan-express'));
+
+app.locals.siteName = "Express Default Scaffold";
+app.locals.siteURI = "http://127.0.0.1";
 
 // Configure Common Default Settings
 //app.use(favicon(__dirname + '/public/favicon.ico'));
