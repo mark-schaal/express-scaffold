@@ -25,6 +25,7 @@ app.set('partials', {
 app.enable('view cache');
 app.engine('html', require('hogan-express'));
 
+// Configure Global Application Variables
 app.locals.siteName = "Express Default Scaffold";
 app.locals.siteURI = "http://127.0.0.1";
 

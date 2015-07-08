@@ -1,13 +1,18 @@
 // Debug Settings
-$debug : transparent;
+$debug : #ccc;
+// Grid Settings
+$base-font-size: 20px !global;
+$max-width: em(1200) !global;
 
-// Media Query Breakpoints
+// Breakpoint Definitions
 $mobile-portrait : em(320px);
 $mobile-landscape : em(480px);
 $tablet : em(768px);
 $desktop : em(1180px);
 
 // Media Query Definitions
+$mobile-portrait-below: new-breakpoint(max-width $mobile-portrait);
+$mobile-landscape-below: new-breakpoint(max-width $mobile-landscape);
 $tablet-below: new-breakpoint(max-width $tablet);
 $desktop-below: new-breakpoint(max-width $desktop);
 $desktop-above: new-breakpoint(min-width $desktop);
@@ -19,6 +24,23 @@ body,html{
 	background: darken($debug, 0%);
 }
 
+// Helper Classes
+.element-invisible {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px,1px,1px,1px);
+	overflow: hidden; 
+	height: 1px;
+}
+
+.element-visible {
+	position: relative !important;
+	clip: auto;
+	overflow: hidden; 
+	height: auto;
+}
+
+// Default Grid Structure
 .zone-wrapper{
 	$zone-padding-vertical: 1em;
 	padding-top: $zone-padding-vertical;
@@ -27,12 +49,33 @@ body,html{
 	.zone{
 		@include outer-container;
 		.region{
+			$region-padding-vertical: 1em;
+			padding-top: $region-padding-vertical;
+			padding-bottom: $region-padding-vertical;
 			background: darken($debug, 10%);
 			@include span-columns(12);
 			@include media($tablet-below){
-				@include span-columns(12);
 				padding-left: 1em;
 				padding-right: 1em;
+			}
+		}
+	}
+	&.zone-wrapper-header{
+		background-color:darken($debug,20%);
+	}
+	&.zone-wrapper-content{
+		min-height: 75vh;
+		background-color:darken($debug,25%);
+	}
+	&.zone-wrapper-footer{
+		min-height: 25vh;
+		background-color:darken($debug,30%);
+		.zone{
+			.region{
+				@include span-columns(6);
+				@include media($tablet-below){
+					@include span-columns(12);
+				}
 			}
 		}
 	}

@@ -341,14 +341,27 @@ body, html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background: transparent; }
+  background: #cccccc; }
+
+.element-invisible {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px; }
+
+.element-visible {
+  position: relative !important;
+  clip: auto;
+  overflow: hidden;
+  height: auto; }
 
 .zone-wrapper {
   padding-top: 1em;
   padding-bottom: 1em;
-  background: transparent; }
+  background: #bfbfbf; }
   .zone-wrapper .zone {
-    max-width: 68em;
+    max-width: 75em;
     margin-left: auto;
     margin-right: auto; }
     .zone-wrapper .zone::after {
@@ -356,7 +369,9 @@ body, html {
       content: "";
       display: table; }
     .zone-wrapper .zone .region {
-      background: transparent;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      background: #b3b3b3;
       float: left;
       display: block;
       margin-right: 2.3576515979%;
@@ -365,11 +380,28 @@ body, html {
         margin-right: 0; }
       @media screen and (max-width: 48em) {
         .zone-wrapper .zone .region {
+          padding-left: 1em;
+          padding-right: 1em; } }
+  .zone-wrapper.zone-wrapper-header {
+    background-color: #999999; }
+  .zone-wrapper.zone-wrapper-content {
+    min-height: 75vh;
+    background-color: #8c8c8c; }
+  .zone-wrapper.zone-wrapper-footer {
+    min-height: 25vh;
+    background-color: gray; }
+    .zone-wrapper.zone-wrapper-footer .zone .region {
+      float: left;
+      display: block;
+      margin-right: 2.3576515979%;
+      width: 48.821174201%; }
+      .zone-wrapper.zone-wrapper-footer .zone .region:last-child {
+        margin-right: 0; }
+      @media screen and (max-width: 48em) {
+        .zone-wrapper.zone-wrapper-footer .zone .region {
           float: left;
           display: block;
           margin-right: 2.3576515979%;
-          width: 100%;
-          padding-left: 1em;
-          padding-right: 1em; }
-          .zone-wrapper .zone .region:last-child {
+          width: 100%; }
+          .zone-wrapper.zone-wrapper-footer .zone .region:last-child {
             margin-right: 0; } }
