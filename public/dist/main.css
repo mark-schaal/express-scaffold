@@ -343,6 +343,11 @@ body, html {
   overflow-x: hidden;
   background: #cccccc; }
 
+.unstyled-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
 .element-invisible {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
@@ -361,7 +366,7 @@ body, html {
   padding-bottom: 1em;
   background: #bfbfbf; }
   .zone-wrapper .zone {
-    max-width: 75em;
+    max-width: 64em;
     margin-left: auto;
     margin-right: auto; }
     .zone-wrapper .zone::after {
@@ -384,6 +389,21 @@ body, html {
           padding-right: 1em; } }
   .zone-wrapper.zone-wrapper-header {
     background-color: #999999; }
+    .zone-wrapper.zone-wrapper-header .zone .region {
+      float: left;
+      display: block;
+      margin-right: 2.3576515979%;
+      width: 48.821174201%; }
+      .zone-wrapper.zone-wrapper-header .zone .region:last-child {
+        margin-right: 0; }
+      @media screen and (max-width: 48em) {
+        .zone-wrapper.zone-wrapper-header .zone .region {
+          float: left;
+          display: block;
+          margin-right: 2.3576515979%;
+          width: 100%; }
+          .zone-wrapper.zone-wrapper-header .zone .region:last-child {
+            margin-right: 0; } }
   .zone-wrapper.zone-wrapper-content {
     min-height: 75vh;
     background-color: #8c8c8c; }
@@ -394,7 +414,7 @@ body, html {
       float: left;
       display: block;
       margin-right: 2.3576515979%;
-      width: 48.821174201%; }
+      width: 31.7615656014%; }
       .zone-wrapper.zone-wrapper-footer .zone .region:last-child {
         margin-right: 0; }
       @media screen and (max-width: 48em) {
@@ -405,3 +425,7 @@ body, html {
           width: 100%; }
           .zone-wrapper.zone-wrapper-footer .zone .region:last-child {
             margin-right: 0; } }
+
+@extends .unstyled-list;
+  nav.menu.inline ul li {
+    display: inline; }

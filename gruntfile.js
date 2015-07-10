@@ -92,5 +92,5 @@ module.exports = function(grunt) {
 		}
 	});
 	require('load-grunt-tasks')(grunt);
-	grunt.registerTask('default', ['sass', 'concat', 'uglify', 'cssmin', 'concurrent:default'])
+	grunt.registerTask('default', ['sass', 'concat', 'uglify', 'cssmin', 'jasmine_node', 'concurrent:default'])
 }

@@ -2,7 +2,7 @@
 $debug : #ccc;
 // Grid Settings
 $base-font-size: 20px !global;
-$max-width: em(1200) !global;
+$max-width: em(1024px) !global;
 
 // Breakpoint Definitions
 $mobile-portrait : em(320px);
@@ -25,6 +25,11 @@ body,html{
 }
 
 // Helper Classes
+.unstyled-list{
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+}
 .element-invisible {
 	position: absolute !important;
 	clip: rect(1px 1px 1px 1px);
@@ -62,6 +67,14 @@ body,html{
 	}
 	&.zone-wrapper-header{
 		background-color:darken($debug,20%);
+		.zone{
+			.region{
+				@include span-columns(6);
+				@include media($tablet-below){
+					@include span-columns(12);
+				}
+			}
+		}
 	}
 	&.zone-wrapper-content{
 		min-height: 75vh;
@@ -72,10 +85,22 @@ body,html{
 		background-color:darken($debug,30%);
 		.zone{
 			.region{
-				@include span-columns(6);
+				@include span-columns(4);
 				@include media($tablet-below){
 					@include span-columns(12);
 				}
+			}
+		}
+	}
+}
+
+// Default Menu Styles
+nav.menu{
+	&.inline{
+		ul{
+			@extends .unstyled-list;
+			li{
+				display: inline;
 			}
 		}
 	}

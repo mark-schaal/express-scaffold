@@ -1,5 +1,13 @@
 $(document).ready(function(){
 });
+$(document).ready(function(){
+
+	var $row = $('.zone');
+	$row.each(function(){
+		$(this).children().matchHeight();
+	});
+
+});
 $(document).ready(function() {
   var menuToggle = $('#js-mobile-menu').unbind();
   $('#js-navigation-menu').removeClass("show");

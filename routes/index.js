@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 	res.locals = merge(res.locals,req.app.locals)
 
   res.render('index', {
-  	title: 'Express'
+  	title: 'Express Scaffold'
   });
 });
 

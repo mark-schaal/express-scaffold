@@ -22,7 +22,11 @@ app.set('partials', {
   scripts : 'partials/global/scripts',
   footer  : 'partials/global/footer',
 });
-app.enable('view cache');
+
+if (app.get('env') === 'production'){
+  app.enable('view cache');
+}
+
 app.engine('html', require('hogan-express'));
 
 // Configure Global Application Variables
