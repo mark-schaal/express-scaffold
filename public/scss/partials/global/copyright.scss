@@ -1,0 +1,9 @@
+#footer-copyright{
+	$footer-font-size: .85em;
+	.block-content{
+		font-size: $footer-font-size;
+		@include media($tablet-below){
+			text-align: center;
+		}
+	}
+}

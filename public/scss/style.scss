@@ -38,6 +38,10 @@
 
 		// Import Refills Patterns
 		@import "refills/type-system-rounded";
+		@import "refills/cards";
 
 		// Import Authored Dependencies
-		@import "partials/global/global.scss";
+		@import "partials/global/global";
+		@import "partials/global/copyright";
+		@import "partials/global/social-media";
+		@import "partials/global/legal-terms";

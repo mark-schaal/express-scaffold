@@ -1,0 +1,12 @@
+#social-media{
+	$footer-font-size: .85em !default;
+	.block-content{
+		font-size: $footer-font-size;
+		text-align: center;
+	}
+	nav.menu{
+		ul li{
+			display: inline-block;
+		}
+	}
+}

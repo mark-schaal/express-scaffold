@@ -2,6 +2,14 @@ $(document).ready(function(){
 });
 $(document).ready(function(){
 
+	var $row = $('.cards');
+	$row.each(function(){
+		$(this).children().matchHeight();
+	});
+
+});
+$(document).ready(function(){
+
 	var $row = $('.zone');
 	$row.each(function(){
 		$(this).children().matchHeight();

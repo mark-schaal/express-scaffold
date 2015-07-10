@@ -1,0 +1,33 @@
+#legal-terms{
+	$footer-font-size: .85em !default;
+	$navigation-color: #477DCA;
+	$nagivation-separator-color: transparentize($navigation-color,.5);
+
+	.block-content{
+		font-size: $footer-font-size;
+		text-align: right;
+		@include media($tablet-below){
+			text-align: center;
+		}
+	}
+	
+	nav.menu ul li{
+		color: $navigation-color;
+		a{
+			color: $navigation-color;
+			&:hover,&:focus{
+				color: $nagivation-separator-color;
+			}
+		}
+		&::after{
+			content: "|";
+			padding-left: .5ex;
+			color: $nagivation-separator-color;
+		}
+		&:last-child{
+			&::after{
+				content: "";
+			}
+		}
+	}
+}
