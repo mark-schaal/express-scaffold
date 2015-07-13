@@ -1,5 +1,5 @@
 // Debug Settings
-$debug : transparent;
+$debug : #ccc;
 
 // Grid Settings
 $base-font-size: 20px !global;
@@ -73,6 +73,12 @@ body,html{
 				@include span-columns(6);
 				@include media($tablet-below){
 					@include span-columns(12);
+				}
+				&.region-header-first{
+					@include span-columns(8);
+				}
+				&.region-header-second{
+					@include span-columns(4);
 				}
 			}
 		}

@@ -449,7 +449,7 @@ body, html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background: transparent; }
+  background: #cccccc; }
 
 .unstyled-list {
   margin: 0;
@@ -472,7 +472,7 @@ body, html {
 .zone-wrapper {
   padding-top: 1em;
   padding-bottom: 1em;
-  background: transparent; }
+  background: #bfbfbf; }
   .zone-wrapper .zone {
     max-width: 64em;
     margin-left: auto;
@@ -484,7 +484,7 @@ body, html {
     .zone-wrapper .zone .region {
       padding-top: 1em;
       padding-bottom: 1em;
-      background: transparent;
+      background: #b3b3b3;
       float: left;
       display: block;
       margin-right: 2.3576515979%;
@@ -496,7 +496,7 @@ body, html {
           padding-left: 1em;
           padding-right: 1em; } }
   .zone-wrapper.zone-wrapper-header {
-    background-color: transparent; }
+    background-color: #999999; }
     .zone-wrapper.zone-wrapper-header .zone .region {
       float: left;
       display: block;
@@ -512,12 +512,26 @@ body, html {
           width: 100%; }
           .zone-wrapper.zone-wrapper-header .zone .region:last-child {
             margin-right: 0; } }
+      .zone-wrapper.zone-wrapper-header .zone .region.region-header-first {
+        float: left;
+        display: block;
+        margin-right: 2.3576515979%;
+        width: 65.8807828007%; }
+        .zone-wrapper.zone-wrapper-header .zone .region.region-header-first:last-child {
+          margin-right: 0; }
+      .zone-wrapper.zone-wrapper-header .zone .region.region-header-second {
+        float: left;
+        display: block;
+        margin-right: 2.3576515979%;
+        width: 31.7615656014%; }
+        .zone-wrapper.zone-wrapper-header .zone .region.region-header-second:last-child {
+          margin-right: 0; }
   .zone-wrapper.zone-wrapper-content {
     min-height: 75vh;
-    background-color: transparent; }
+    background-color: #8c8c8c; }
   .zone-wrapper.zone-wrapper-footer {
     min-height: 25vh;
-    background-color: transparent; }
+    background-color: gray; }
     .zone-wrapper.zone-wrapper-footer .zone .region {
       float: left;
       display: block;
