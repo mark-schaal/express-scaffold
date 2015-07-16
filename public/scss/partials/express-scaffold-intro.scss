@@ -1,0 +1,44 @@
+.express-scaffold-intro{
+	$card-background-color: #fff;
+	$card-header-font: $primary-font !default;
+	$card-header-icon-size: em(100);
+	$card-background-sprite: url("/public/images/Logo-Grid.png");
+
+	// Card Wrapper
+	.card{
+		margin-top: ($card-header-icon-size / 2);
+		background-color: $card-background-color;
+	}
+
+	// Card Heading
+	.card .card-header{
+		font-family: $card-header-font;
+		text-align: center;
+		text-transform: capitalize;
+	}
+
+	// Card Logo
+	.card .card-header i{
+		display: block;
+		overflow: hidden;
+		margin-top: (-1 * $card-header-icon-size / 2);
+		margin-left: auto;
+		margin-right: auto;
+		width: $card-header-icon-size;
+		height: $card-header-icon-size;
+		background-image: $card-background-sprite;
+		background-position: (0 * $card-header-icon-size) (0 * $card-header-icon-size);
+		background-color: #fff;
+		border: 1px solid #DDD;
+		border-radius: ($card-header-icon-size / 2);
+		
+		// Grunt Logo
+		&.grunt{
+		}
+
+		// SASS Logo
+		&.sass{
+			background-position: (1 * $card-header-icon-size) (1 * $card-header-icon-size);
+		}
+	}
+}

@@ -449,7 +449,7 @@ body, html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background: #cccccc; }
+  background: transparent; }
 
 .unstyled-list {
   margin: 0;
@@ -472,7 +472,7 @@ body, html {
 .zone-wrapper {
   padding-top: 1em;
   padding-bottom: 1em;
-  background: #bfbfbf; }
+  background: transparent; }
   .zone-wrapper .zone {
     max-width: 64em;
     margin-left: auto;
@@ -484,7 +484,7 @@ body, html {
     .zone-wrapper .zone .region {
       padding-top: 1em;
       padding-bottom: 1em;
-      background: #b3b3b3;
+      background: transparent;
       float: left;
       display: block;
       margin-right: 2.3576515979%;
@@ -496,7 +496,7 @@ body, html {
           padding-left: 1em;
           padding-right: 1em; } }
   .zone-wrapper.zone-wrapper-header {
-    background-color: #999999; }
+    background-color: transparent; }
     .zone-wrapper.zone-wrapper-header .zone .region {
       float: left;
       display: block;
@@ -528,10 +528,10 @@ body, html {
           margin-right: 0; }
   .zone-wrapper.zone-wrapper-content {
     min-height: 75vh;
-    background-color: #8c8c8c; }
+    background-color: transparent; }
   .zone-wrapper.zone-wrapper-footer {
     min-height: 25vh;
-    background-color: gray; }
+    background-color: transparent; }
     .zone-wrapper.zone-wrapper-footer .zone .region {
       float: left;
       display: block;
@@ -584,3 +584,28 @@ body, html {
     color: rgba(71, 125, 202, 0.5); }
   #legal-terms nav.menu ul li:last-child::after {
     content: ""; }
+
+.express-scaffold-intro .card {
+  margin-top: 3.125em;
+  background-color: #fff; }
+
+.express-scaffold-intro .card .card-header {
+  font-family: "Varela Round", sans-serif;
+  text-align: center;
+  text-transform: capitalize; }
+
+.express-scaffold-intro .card .card-header i {
+  display: block;
+  overflow: hidden;
+  margin-top: -3.125em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 6.25em;
+  height: 6.25em;
+  background-image: url("/public/images/Logo-Grid.png");
+  background-position: 0em 0em;
+  background-color: #fff;
+  border: 1px solid #DDD;
+  border-radius: 3.125em; }
+  .express-scaffold-intro .card .card-header i.sass {
+    background-position: 6.25em 6.25em; }

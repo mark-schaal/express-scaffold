@@ -1,5 +1,5 @@
 // Debug Settings
-$debug : #ccc;
+$debug : transparent;
 
 // Grid Settings
 $base-font-size: 20px !global;
@@ -17,6 +17,10 @@ $mobile-landscape-below: new-breakpoint(max-width $mobile-landscape);
 $tablet-below: new-breakpoint(max-width $tablet);
 $desktop-below: new-breakpoint(max-width $desktop);
 $desktop-above: new-breakpoint(min-width $desktop);
+
+// Default System Fonts
+$primary-font: "Varela Round", sans-serif;
+$secondary-font: Arial, Helvetica, sans-serif;
 
 body,html{
 	margin: 0;

@@ -40,6 +40,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/public/images', express.static(path.join(__dirname, 'public/images')));
 app.use('/files', express.static(path.join(__dirname, 'public/files')));
 
 // Define Application Routes
