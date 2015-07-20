@@ -586,8 +586,16 @@ body, html {
     content: ""; }
 
 .express-scaffold-intro .card {
+  position: relative;
+  top: 0;
   margin-top: 3.125em;
-  background-color: #fff; }
+  background-color: #fff;
+  -webkit-transition: top 0.25s ease-in-out;
+  -moz-transition: top 0.25s ease-in-out;
+  transition: top 0.25s ease-in-out; }
+  .express-scaffold-intro .card:hover,
+  .express-scaffold-intro .card:focus {
+    top: -1em; }
 
 .express-scaffold-intro .card .card-header {
   font-family: "Varela Round", sans-serif;
@@ -600,6 +608,7 @@ body, html {
   margin-top: -3.125em;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: .5em;
   width: 6.25em;
   height: 6.25em;
   background-image: url("/public/images/Logo-Grid.png");
@@ -608,4 +617,15 @@ body, html {
   border: 1px solid #DDD;
   border-radius: 3.125em; }
   .express-scaffold-intro .card .card-header i.sass {
-    background-position: 6.25em 6.25em; }
+    background-position: -6.25em 0em; }
+  .express-scaffold-intro .card .card-header i.seo {
+    background-position: -12.5em 0em; }
+
+.express-scaffold-intro .card .card-copy {
+  padding: 1em;
+  font-family: "Nunito", sans-serif;
+  font-weight: 300; }
+
+.express-scaffold-intro .card .card-copy ul li {
+  text-align: center;
+  margin-bottom: .5em; }

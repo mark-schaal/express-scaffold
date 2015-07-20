@@ -1,13 +1,22 @@
 .express-scaffold-intro{
 	$card-background-color: #fff;
 	$card-header-font: $primary-font !default;
+	$card-header-line-height: 1.25em;
 	$card-header-icon-size: em(100);
+	$card-copy-font: $secondary-font !default;
 	$card-background-sprite: url("/public/images/Logo-Grid.png");
 
 	// Card Wrapper
 	.card{
+		position: relative;
+		top: 0;
 		margin-top: ($card-header-icon-size / 2);
 		background-color: $card-background-color;
+		@include transition(top .25s ease-in-out);
+		&:hover,
+		&:focus{
+			top: -1em;
+		}
 	}
 
 	// Card Heading
@@ -24,6 +33,7 @@
 		margin-top: (-1 * $card-header-icon-size / 2);
 		margin-left: auto;
 		margin-right: auto;
+		margin-bottom: .5em;
 		width: $card-header-icon-size;
 		height: $card-header-icon-size;
 		background-image: $card-background-sprite;
@@ -38,7 +48,30 @@
 
 		// SASS Logo
 		&.sass{
-			background-position: (1 * $card-header-icon-size) (1 * $card-header-icon-size);
+			background-position: (-1 * $card-header-icon-size) (0 * $card-header-icon-size);
 		}
+
+		// SEO Logo
+		&.seo{
+			background-position: (-2 * $card-header-icon-size) (0 * $card-header-icon-size);
+		}
+	}
+
+	// Card Copy
+	.card .card-copy{
+		padding: 1em;
+		font-family: $card-copy-font;
+		font-weight: 300;
+	}
+
+	.card .card-copy ul{
+		// -webkit-column-count: 2;
+		// 	 -moz-column-count: 2;
+		// 				column-count: 2;
+	}
+
+	.card .card-copy ul li{
+		text-align: center;
+		margin-bottom: .5em;
 	}
 }
